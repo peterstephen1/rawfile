@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Palindrome Checker</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator 2.0</title>
+  </head>
+  <body>
+    <div class="glass-effect">
+    <div class="calculator">
+      <div class="display">
+        <span class="lastInput"></span>
+        <span class="newInput"></span>
+      </div>
 
-    
-</head>
+      <div class="buttons">
+        <button class="button percentage">%</button>
+        <button class="button clear">C</button>
+        <button class="button del">&lArr;</button>
+        <button class="button square">x<sup>2</sup></button>
+        <button class="button squareRoot">&#8730</button>
+        <button class="button divide" value="&#247">&#247</button>
+        <button class="button multiply" value="&times;">&times;</button>
+        <button class="button seven" value="7">7</button>
+        <button class="button eight" value="8">8</button>
+        <button class="button nine" value="9">9</button>
+        <button class="button minus" value="-">-</button>
+        <button class="button four" value="4">4</button>
+        <button class="button five" value="5">5</button>
+        <button class="button six" value="6">6</button>
+        <button class="button plus" value="+">+</button>
+        <button class="button one" value="1">1</button>
+        <button class="button two" value="2">2</button>
+        <button class="button three" value="3">3</button>
+        <button class="button zero" value="0">0</button>
+        <button class="button equal">=</button>
+      </div>
+    </div>
+    </div>
 
-<body>
-
-<div class="container">
-    <h2>Palindrome Checker</h2>
-    <input type="text" id="inputText" placeholder="Enter a word or phrase">
-    <button onclick="checkPalindrome()">Check</button>
-    <div class="result" id="result"></div>
-    
-</div>
-
-<script>
-    function checkPalindrome() {
-
-        const input = document.getElementById('inputText').value;
-
-        const normalizedInput = input.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-
-     
-        const reversedInput = normalizedInput.split('').reverse().join('');
-        const resultDiv = document.getElementById('result');
-
-        if (normalizedInput === reversedInput) {
-            resultDiv.textContent = `"${input}" is a palindrome!`;
-            resultDiv.className = 'result success';
-        } else {
-            resultDiv.textContent = `"${input}" is not a palindrome.`;
-            resultDiv.className = 'result failure';
-        }
-    }
-</script>
-
-</body>
-</html>
-
-    
-    
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
